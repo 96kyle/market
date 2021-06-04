@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import Container from "./Container";
@@ -19,6 +19,10 @@ const AllProduct = () => {
         </Link>
       );
     });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

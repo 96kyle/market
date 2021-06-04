@@ -63,7 +63,16 @@ const MyInfo = ({ modalOpen }) => {
           등록날짜
         </div>
       </MyProductList>
-      <div style={{ overflowY: "scroll", height: "250px" }}>{myProduct}</div>
+      <div
+        style={
+          myProduct.length === 0
+            ? { height: "250px" }
+            : { overflowY: "scroll", height: "250px" }
+        }
+      >
+        {myProduct}
+      </div>
+
       <LogOutBtn onClick={logOut}> 로그아웃 </LogOutBtn>
     </InfoDiv>
   );

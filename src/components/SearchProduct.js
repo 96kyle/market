@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
@@ -22,6 +22,10 @@ const SearchProduct = () => {
         </Link>
       );
     });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return <Container renderProduct={renderProduct} />;
 };
 

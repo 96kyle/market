@@ -127,6 +127,10 @@ const SignUp = ({ area0, area1 }) => {
   const areaRef1 = useRef(null);
   const areaRef2 = useRef(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <SignUpContainer>
       <FormBox onSubmit={onSubmit}>

@@ -59,7 +59,7 @@ const DetailProduct = ({ setModalOpen }) => {
             src={v.product_image}
             alt="이미지오류"
             width="600"
-            height="450"
+            height="600"
           />
         </div>
         <ProductInfo>
@@ -152,6 +152,10 @@ const DetailProduct = ({ setModalOpen }) => {
       history.push("/sendmail/" + product_id);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

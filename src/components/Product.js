@@ -8,7 +8,7 @@ const Product = ({ item }) => {
 
   const cutName = item.product_name.split("");
   const a = [];
-  for (var i = 0; i < 15; i++) {
+  for (var i = 0; i < 13; i++) {
     a.push(cutName[i]);
   }
   const b = a.join("") + "...";
@@ -21,7 +21,7 @@ const Product = ({ item }) => {
         width="250"
         height="250"
       />
-      <Name>{item.product_name.length < 15 ? item.product_name : b}</Name>
+      <Name>{item.product_name.length < 13 ? item.product_name : b}</Name>
       <Area>
         {item.area1} {item.area2}
       </Area>

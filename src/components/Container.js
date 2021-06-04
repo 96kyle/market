@@ -25,7 +25,18 @@ const Container = ({ renderProduct }) => {
     <ProductContainer>
       <ProductBox>
         {render.length === 0 ? (
-          <NoProduct>등록된상품이 없습니다...</NoProduct>
+          <NoProduct>
+            <div style={{ width: "300px", marginLeft: "300px" }}>
+              등록된상품이 없습니다...
+            </div>
+            <div style={{ marginTop: "200px" }}>
+              <img
+                src={"../" + process.env.PUBLIC_URL + "Noproduct.png"}
+                alt="이미지오류"
+                width="350px"
+              />
+            </div>
+          </NoProduct>
         ) : (
           render
         )}
@@ -59,11 +70,12 @@ const ProductBox = styled.div`
 `;
 
 const NoProduct = styled.div`
-  width: 500px;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin: 200px 0px 200px 0px;
+  width: 1000px;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Btn = styled.button`

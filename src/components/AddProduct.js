@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
 import { storageService } from "../FilebaseInit";
@@ -73,6 +73,10 @@ const AddProduct = ({ productKinds }) => {
       }
     });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const productKindRef = useRef(null);
   const productNameRef = useRef(null);

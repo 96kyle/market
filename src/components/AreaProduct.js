@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import useFetch from "../hooks/useFetch";
@@ -32,6 +32,10 @@ const AreaProduct = ({ area0, area1 }) => {
         </Link>
       );
     });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const areaRef1 = useRef(null);
   const areaRef2 = useRef(null);

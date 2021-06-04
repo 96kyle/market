@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -10,6 +10,11 @@ const SelectKinds = ({ productKinds }) => {
       </Link>
     );
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <KindContainer>
       <h1>어떤 종류의 상품을 찾으세요?</h1>

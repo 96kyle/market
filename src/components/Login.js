@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import useFetch from "../hooks/useFetch";
@@ -29,6 +29,10 @@ const Menubar = ({ modalOpen }) => {
   const modalClose = () => {
     modalOpen(false);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

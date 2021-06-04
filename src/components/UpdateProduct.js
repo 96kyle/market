@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router";
 import styled from "styled-components";
 import useFetch from "../hooks/useFetch";
@@ -43,6 +43,10 @@ const UpdateProduct = ({ productKinds }) => {
       });
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const productKindRef = useRef(null);
   const productNameRef = useRef(null);
